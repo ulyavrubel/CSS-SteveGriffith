@@ -1,0 +1,46 @@
+body {
+  font-family: arial;
+  background-color: #dedecc;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #c59;
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 128, 255);
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+}
+
+main h2 {
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+  color: rgba(0, 128, 255, 0.5);
+}
+p {
+  padding: 0;
+  margin: 20px;
+  font-size: 1rem;
+  font-family: verdana;
+  line-height: 1.6;
+}
+
+p:first-of-type {
+  color: hsl(90, 50%, 50%);
+}
+
+p:last-of-type {
+  color: hsl(210, 50%, 50%);
+}

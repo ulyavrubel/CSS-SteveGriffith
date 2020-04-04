@@ -1,0 +1,30 @@
+img {
+  width: 50px;
+}
+
+body {
+  font-family: arial;
+}
+
+p {
+  padding: 0;
+
+  border: 1px solid black;
+  margin: 20px;
+  font-size: 1rem;
+
+  font-family: verdana;
+  background-color: lightyellow;
+  line-height: 1.6;
+}
+
+html {
+  font-size: 20px;
+}
+
+h1 {
+  background-color: magenta;
+  color: white;
+  font-size: 3rem;
+  line-height: 3rem;
+}

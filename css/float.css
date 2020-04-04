@@ -1,0 +1,75 @@
+body {
+  font-family: arial;
+  background-color: #dedecc;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #c59;
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 128, 255);
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+}
+
+main h2 {
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+  color: rgba(0, 128, 255, 0.5);
+}
+p {
+  padding: 0;
+  margin: 20px;
+  font-size: 1rem;
+  font-family: verdana;
+  line-height: 1.6;
+}
+
+p:first-of-type {
+  color: hsl(90, 50%, 50%);
+}
+
+p:last-of-type {
+  color: hsl(210, 50%, 50%);
+}
+
+img {
+  width: 100px;
+}
+
+.one img {
+  float: left;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+}
+
+.two {
+  background-color: gold;
+  /* containerbackground and borders will wrap around anything which floats inside the container */
+  overflow: auto;
+}
+.two img {
+  float: right;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+.three img {
+  float: left;
+}
+.three {
+  /* allows to move text to the bottom of the image inside the "two" p  */
+  clear: right;
+}
