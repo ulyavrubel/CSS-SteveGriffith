@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Transition</title>
+    <style>
+      /* 4 steps transition:
+        transition-property: all or specific property name
+        transition-duration: 1s
+        transition-timing-function:
+        ease - speeding up throught the entire transition
+        linear - same amount of time to go from one state to the next, evenly distributed changes
+        ease-in - starting slowly and speed up
+        ease out - start faster an then slow down
+        ease-in-out - slower faster slowe
+        step-start
+        step-end
+        steps(1, start)
+        cubic-bezier - cubic-bezier.com
+        transition-delay: 0.5s
+
+        for steps
+
+        transition: prop1 4s ease-in 0s,
+
+        */
+
+      .box {
+        max-width: 20rem;
+        border: 1px solid #ddd;
+        position: relative;
+      }
+      .box-title {
+        padding: 0.5rem;
+        background-color: tomato;
+        color: white;
+      }
+      .box-title h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        transition: letter-spacing 0.9s;
+      }
+
+      .box-title .nine {
+        letter-spacing: 9px;
+      }
+
+      .box-content {
+        padding: 0.5rem;
+      }
+      .box-content p {
+        font-size: 1rem;
+        font-weight: 100;
+      }
+
+      .box-content img {
+        margin: 0 0.5rem 0.5rem 0;
+        float: left;
+      }
+
+      .box-content:hover img {
+        transform: rotate(-45deg);
+        transition: transform 0.6s;
+      }
+
+      .box-footer {
+        background-color: grey;
+        color: white;
+        padding: 1rem 0.5rem;
+        position: absolute;
+        bottom: 0rem;
+        width: 100%;
+        transform: translateY(0rem);
+        transition: transform 1s cubic-bezier(0.6, -0.28, 0.735, 0.045),
+          color 3s linear, padding 2s ease-in;
+      }
+
+      .box:hover .box-footer {
+        transform: translateY(8rem);
+        color: red;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="simon">
+      <div class="box">
+        <div class="box-title">
+          <h2>The Box title</h2>
+        </div>
+        <div class="box-content">
+          <p>
+            <img
+              width="100px"
+              src="https://previews.123rf.com/images/alexutemov/alexutemov1607/alexutemov160700161/59341838-vector-tropical-leaves-green-tree-leave-natural-green-leaf-isolated-leaf-element-floral-color-garden.jpg"
+            />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="box-footer">
+          <p>Some text in the footer area</p>
+          <p>Another line of the footer erea</p>
+        </div>
+      </div>
+    </main>
+    <script>
+      let h2 = document.querySelector(".box-title h2");
+      //timmy just stores a reference to the timer. That way, if you ever want to stop the timer running you can call clearTimeout(timmy); `timmy` is just the name I typically use for my timer.
+      let timmy = setInterval(function () {
+        h2.classList.toggle("nine");
+      }, 2000);
+    </script>
+  </body>
+</html>
