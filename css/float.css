@@ -66,10 +66,10 @@ img {
   margin-bottom: 1rem;
 }
 
-.three img {
+/* .three img {
   float: left;
-}
+} */
 .three {
-  /* allows to move text to the bottom of the image inside the "two" p  */
-  clear: right;
+  /* allows to move text to the bottom of the image inside the "two" p  */ */
+   clear: right;
 }
